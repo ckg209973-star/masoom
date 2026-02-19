@@ -7,176 +7,164 @@
 
 <style>
 body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:#fff;
 }
 
-.container{
-    width:90%;
-    max-width:400px;
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(15px);
-    border-radius:25px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 0 40px rgba(0,255,150,0.3);
+.card{
+    width:350px;
+    padding:30px 20px;
+    border-radius:25px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(0,255,150,0.3);
+    text-align:center;
 }
 
-h1{
-    color:#00ff88;
-    font-size:32px;
-    letter-spacing:3px;
-    margin-bottom:5px;
-    text-shadow:0 0 20px #00ff88;
+.title{
+    font-size:32px;
+    font-weight:bold;
+    color:#00ff88;
+    letter-spacing:3px;
+    text-shadow:0 0 20px #00ff88;
 }
 
 .subtitle{
-    color:#ddd;
-    margin-bottom:25px;
+    margin-top:10px;
+    font-size:18px;
+    color:#ddd;
 }
 
-.btn{
-    display:block;
-    background:#00e676;
-    color:black;
-    padding:18px;
-    margin:15px 0;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:18px;
-    box-shadow:0 0 25px #00ff88;
-    transition:0.3s;
+.btn, .footer-btn{
+    margin-top:25px;
+    display:block;
+    padding:18px;
+    border-radius:50px;
+    background:linear-gradient(90deg,#00ff88,#00cc66);
+    color:#000;
+    font-weight:bold;
+    font-size:18px;
+    text-decoration:none;
+    box-shadow:0 0 25px #00ff88;
+    transition:0.3s;
 }
 
-.btn:hover{
-    transform:scale(1.05);
+.btn:hover, .footer-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 35px #00ff88;
 }
 
-.countdown-box{
-    background:#2a0f0f;
-    padding:20px;
-    border-radius:20px;
-    margin:20px 0;
-    box-shadow:0 0 30px red;
+.offer-box{
+    margin-top:25px;
+    padding:20px;
+    border-radius:25px;
+    background:#2b1414;
+    box-shadow:0 0 30px red;
 }
 
-.countdown-box h2{
-    color:white;
-    margin-bottom:10px;
+.offer-box h3{
+    margin:0;
+    font-size:22px;
 }
 
-#timer{
-    font-size:40px;
-    color:red;
-    font-weight:bold;
-    text-shadow:0 0 20px red;
+.countdown{
+    font-size:40px;
+    color:red;
+    margin-top:10px;
+    font-weight:bold;
+    text-shadow:0 0 20px red;
 }
 
 .features{
-    text-align:left;
-    color:#eee;
-    margin:20px 0;
-    line-height:1.8;
+    margin-top:20px;
+    text-align:left;
+    font-size:16px;
+    line-height:28px;
 }
 
-.footer-btn{
-    background:#00e676;
-    color:black;
-    padding:18px;
-    border-radius:40px;
-    text-decoration:none;
-    display:block;
-    font-weight:bold;
-    font-size:18px;
-    box-shadow:0 0 25px #00ff88;
+.features span{
+    display:block;
 }
 
 .small-text{
-    color:#ccc;
-    margin-top:15px;
-    font-size:14px;
+    margin-top:20px;
+    font-size:14px;
+    color:#ccc;
 }
 
-.ads-box{
-    margin-top:20px;
-    background:#1b2b2f;
-    padding:12px;
-    border-radius:15px;
-    color:white;
+.ads{
+    margin-top:25px;
+    padding:12px;
+    border-radius:40px;
+    background:#1c2b2e;
+    font-size:16px;
 }
 
-.ads-box a{
-    color:#00ffcc;
-    font-weight:bold;
-    text-decoration:none;
-}
-
-.ads-box a:hover{
-    text-decoration:underline;
+.ads span{
+    color:#00ffcc;
+    font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="card">
 
-    <h1>RONAK CRICKET</h1>
-    <div class="subtitle">Best channel of India</div>
+    <div class="title">RONAK CRICKET</div>
+    <div class="subtitle">Best channel of India</div>
 
-    <!-- First Join Button -->
-    <a href="https://t.me/+Vuw_Q6D1sB9hMGJl" class="btn" target="_blank">
-        🚀 Join Telegram
-    </a>
+    <!-- Join Button 1 -->
+    <a href="https://t.me/+Vuw_Q6D1sB9hMGJl" target="_blank" class="btn">
+        🚀 Join Telegram
+    </a>
 
-    <div class="countdown-box">
-        <h2>Offer Ends In:</h2>
-        <div id="timer">10</div>
-    </div>
+    <div class="offer-box">
+        <h3>Offer Ends In:</h3>
+        <div class="countdown" id="countdown">10</div>
+    </div>
 
-    <div class="features">
-        🔥 Back to back 10 matches pass 💯💯 <br>
-        👑 Cricket match tipping queen <br>
-        ✅ 97% accuracy in Matches
-    </div>
+    <div class="features">
+        <span>🔥 Back to back 10 matches pass 💯💯</span>
+        <span>👑 Cricket match tipping queen</span>
+        <span>✅ 97% accuracy in Matches</span>
+    </div>
 
-    <!-- Second Join Button -->
-    <a href="https://t.me/+Vuw_Q6D1sB9hMGJl" class="footer-btn" target="_blank">
-        💚 Join Now & Get Premium Tips
-    </a>
+    <!-- Join Button 2 -->
+    <a href="https://t.me/+Vuw_Q6D1sB9hMGJl" target="_blank" class="footer-btn">
+        💚 Join Now & Get Premium Tips
+    </a>
 
-    <div class="small-text">
-        You are invited to the channel Ronak Cricket™ <br>
-        Click above to join.
-    </div>
+    <div class="small-text">
+        You are invited to the channel Ronak Cricket™<br>
+        Click above to join.
+    </div>
 
-    <!-- Updated Ads Box -->
-    <div class="ads-box">
-        Ads By 
-        <a href="https://t.me/+_ldYCcyc-qwwODU1" target="_blank">
-            Ck Ads Agency
-        </a>
-    </div>
+    <div class="ads">
+        Ads By <span>Ck Ads Agency</span>
+    </div>
 
 </div>
 
 <script>
-let timeLeft = 10;
-let timer = document.getElementById("timer");
+// 10 Second Countdown
+let time = 10;
+let countdownElement = document.getElementById("countdown");
 
-let countdown = setInterval(function(){
-    timeLeft--;
-    timer.innerHTML = timeLeft;
-    if(timeLeft <= 0){
-        clearInterval(countdown);
-        timer.innerHTML = "Expired";
-    }
+let timer = setInterval(() => {
+    time--;
+    countdownElement.innerHTML = time;
+    if(time <= 0){
+        clearInterval(timer);
+        countdownElement.innerHTML = "Expired";
+    }
 },1000);
 </script>
 

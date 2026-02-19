@@ -3,112 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ronak Cricket</title>
+<title>Cricket Landing Page</title>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1424848218606484');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1424848218606484&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 
 <style>
 body{
     margin:0;
-    padding:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #0f3d36, #071a1a);
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
-    color:#fff;
+    color:white;
 }
 
-.card{
-    width:350px;
+.container{
+    width:90%;
+    max-width:420px;
     padding:30px 20px;
     border-radius:25px;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 0 40px rgba(0,255,150,0.3);
+    background: linear-gradient(145deg,#0e3a33,#082020);
+    box-shadow: 0 0 40px rgba(0,255,170,0.15);
     text-align:center;
 }
 
-.title{
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:rgba(0,255,170,0.15);
+    color:#7dffcc;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+h1{
     font-size:32px;
+    margin:10px 0;
     font-weight:bold;
-    color:#00ff88;
-    letter-spacing:3px;
-    text-shadow:0 0 20px #00ff88;
 }
 
-.subtitle{
-    margin-top:10px;
-    font-size:18px;
-    color:#ddd;
-}
-
-.btn, .footer-btn{
-    margin-top:25px;
-    display:block;
-    padding:18px;
-    border-radius:50px;
-    background:linear-gradient(90deg,#00ff88,#00cc66);
-    color:#000;
-    font-weight:bold;
-    font-size:18px;
-    text-decoration:none;
-    box-shadow:0 0 25px #00ff88;
-    transition:0.3s;
-}
-
-.btn:hover, .footer-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 35px #00ff88;
-}
-
-.offer-box{
-    margin-top:25px;
-    padding:20px;
-    border-radius:25px;
-    background:#2b1414;
-    box-shadow:0 0 30px red;
-}
-
-.offer-box h3{
-    margin:0;
-    font-size:22px;
+.subtext{
+    color:#cfcfcf;
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:20px;
 }
 
 .countdown{
-    font-size:40px;
-    color:red;
-    margin-top:10px;
+    font-size:18px;
+    margin:20px 0;
+    letter-spacing:1px;
+}
+
+.countdown span{
+    color:#00ff88;
     font-weight:bold;
-    text-shadow:0 0 20px red;
+    font-size:22px;
 }
 
-.features{
-    margin-top:20px;
-    text-align:left;
-    font-size:16px;
-    line-height:28px;
-}
-
-.features span{
-    display:block;
-}
-
-.small-text{
-    margin-top:20px;
-    font-size:14px;
-    color:#ccc;
-}
-
-.ads{
-    margin-top:25px;
-    padding:12px;
+.btn{
+    display:inline-block;
+    margin:20px 0;
+    padding:15px 40px;
     border-radius:40px;
-    background:#1c2b2e;
-    font-size:16px;
+    background:linear-gradient(45deg,#00ff88,#00cc66);
+    color:black;
+    font-weight:bold;
+    font-size:18px;
+    text-decoration:none;
+    box-shadow:0 0 20px rgba(0,255,120,0.6);
+    transition:0.3s;
 }
 
-.ads span{
-    color:#00ffcc;
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.info{
+    font-size:15px;
+    color:#cccccc;
+    margin-top:10px;
+}
+
+hr{
+    margin:25px 0;
+    border:0.5px dashed #555;
+}
+
+.disclaimer{
+    font-size:13px;
+    color:#aaaaaa;
+    line-height:1.6;
+}
+
+.ads-box{
+    margin-top:20px;
+    padding:8px 15px;
+    background:rgba(0,255,170,0.1);
+    border-radius:20px;
+    font-size:13px;
+}
+
+.ads-box a{
+    color:#00ff99;
+    text-decoration:none;
     font-weight:bold;
 }
 </style>
@@ -116,54 +139,52 @@ body{
 
 <body>
 
-<div class="card">
+<div class="container">
 
-    <div class="title">RONAK CRICKET</div>
-    <div class="subtitle">Best channel of India</div>
+    <div class="badge">🏏 Cricket Updates & Insights</div>
 
-    <!-- Join Button 1 -->
-    <a href="https://t.me/+Vuw_Q6D1sB9hMGJl" target="_blank" class="btn">
-        🚀 Join Telegram
-    </a>
+    <h1>Sultan Qureshi</h1>
 
-    <div class="offer-box">
-        <h3>Offer Ends In:</h3>
-        <div class="countdown" id="countdown">10</div>
+    <div class="subtext">
+        Honest analysis • Match insights • Community driven
     </div>
 
-    <div class="features">
-        <span>🔥 Back to back 10 matches pass 💯💯</span>
-        <span>👑 Cricket match tipping queen</span>
-        <span>✅ 97% accuracy in Matches</span>
+    <div class="countdown">
+        FREE JOINING ENDS IN <span id="timer">53</span>s
     </div>
 
-    <!-- Join Button 2 -->
-    <a href="https://t.me/+Vuw_Q6D1sB9hMGJl" target="_blank" class="footer-btn">
-        💚 Join Now & Get Premium Tips
-    </a>
+    <a href="#" class="btn">Subscribe Free</a>
 
-    <div class="small-text">
-        You are invited to the channel Ronak Cricket™<br>
-        Click above to join.
+    <div class="info">
+        Stay informed with transparent cricket analysis
     </div>
 
-    <div class="ads">
-        Ads By <span>Ck Ads Agency</span>
+    <hr>
+
+    <div class="disclaimer">
+        Disclaimer: This channel shares cricket updates, analysis,
+        and general information for fans. It does not promote betting
+        or gambling. No outcomes are guaranteed. Please verify
+        independently and act responsibly.
+    </div>
+
+    <div class="ads-box">
+        Ads By 
+        <a href="https://t.me/+_ldYCcyc-qwwODU1" target="_blank">
+            Ck Ads Agancy
+        </a>
     </div>
 
 </div>
 
 <script>
-// 10 Second Countdown
-let time = 10;
-let countdownElement = document.getElementById("countdown");
+let time = 53;
+let timer = document.getElementById("timer");
 
-let timer = setInterval(() => {
-    time--;
-    countdownElement.innerHTML = time;
-    if(time <= 0){
-        clearInterval(timer);
-        countdownElement.innerHTML = "Expired";
+setInterval(()=>{
+    if(time > 0){
+        time--;
+        timer.innerText = time;
     }
 },1000);
 </script>

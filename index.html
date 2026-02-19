@@ -1,214 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ronak Cricket</title>
 
-    <!-- Meta Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }
-        (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1183539050152137');
-        fbq('track', 'PageView');
-    </script>
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
 
-    <noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1183539050152137&ev=PageView&noscript=1"/>
-</noscript>
-    <!-- End Meta Pixel Code -->
+.container{
+    width:90%;
+    max-width:400px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 0 40px rgba(0,255,150,0.3);
+}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garud Fixer (Baazigar)</title>
+h1{
+    color:#00ff88;
+    font-size:32px;
+    letter-spacing:3px;
+    margin-bottom:5px;
+    text-shadow:0 0 20px #00ff88;
+}
 
-    <!-- Preload background for faster render -->
-    <link rel="preload" as="image" href="https://applescoop.org/image/wallpapers/iphone/iphone-dark-black-and-blue-abstract-impede-depth-effect-with-think-lines-apple-iphone-21-09-2025-1758398684-hd-wallpaper.webp">
+.subtitle{
+    color:#ddd;
+    margin-bottom:25px;
+}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-        }
+.btn{
+    display:block;
+    background:#00e676;
+    color:black;
+    padding:18px;
+    margin:15px 0;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    box-shadow:0 0 25px #00ff88;
+    transition:0.3s;
+}
 
-        body {
-            background: #0c0f1a url("https://applescoop.org/image/wallpapers/iphone/iphone-dark-black-and-blue-abstract-impede-depth-effect-with-think-lines-apple-iphone-21-09-2025-1758398684-hd-wallpaper.webp") center/cover no-repeat fixed;
-            color: #fff;
-            min-height: 100vh;
-        }
+.btn:hover{
+    transform:scale(1.05);
+}
 
-        .overlay {
-            background: rgba(10, 12, 22, .82);
-            min-height: 100vh;
-        }
+.countdown-box{
+    background:#2a0f0f;
+    padding:20px;
+    border-radius:20px;
+    margin:20px 0;
+    box-shadow:0 0 30px red;
+}
 
-        .container {
-            max-width: 420px;
-            margin: auto;
-            padding: 20px 15px 90px;
-        }
+.countdown-box h2{
+    color:white;
+    margin-bottom:10px;
+}
 
-        /* Profile */
+#timer{
+    font-size:40px;
+    color:red;
+    font-weight:bold;
+    text-shadow:0 0 20px red;
+}
 
-        .profile-box {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.features{
+    text-align:left;
+    color:#eee;
+    margin:20px 0;
+    line-height:1.8;
+}
 
-        .profile-box img {
-            width: 95px;
-            height: 95px;
-            border-radius: 50%;
-            border: 2px solid #ffffff55;
-        }
+.footer-btn{
+    background:#00e676;
+    color:black;
+    padding:18px;
+    border-radius:40px;
+    text-decoration:none;
+    display:block;
+    font-weight:bold;
+    font-size:18px;
+    box-shadow:0 0 25px #00ff88;
+}
 
-        .profile-box h1 {
-            margin-top: 10px;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
+.small-text{
+    color:#ccc;
+    margin-top:15px;
+    font-size:14px;
+}
 
-        /* Card */
+.ads-box{
+    margin-top:20px;
+    background:#1b2b2f;
+    padding:12px;
+    border-radius:15px;
+    color:white;
+}
 
-        .card {
-            background: #ffffff12;
-            border: 1px solid #ffffff20;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
+.ads-box a{
+    color:#00ffcc;
+    font-weight:bold;
+    text-decoration:none;
+}
 
-        /* Button */
-
-        .btn {
-            display: block;
-            margin-top: 14px;
-            padding: 14px;
-            border-radius: 30px;
-            background: #1fa2ff;
-            color: #fff;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        /* Features */
-
-        .features {
-            list-style: none;
-            margin-top: 8px;
-        }
-
-        .features li {
-            font-size: .95rem;
-            margin: 6px 0;
-        }
-
-        .features li::before {
-            content: "✓ ";
-            color: #4caf50;
-        }
-
-        /* Footer */
-
-        .footer {
-            text-align: center;
-            font-size: .85rem;
-            opacity: .85;
-        }
-
-        .footer a {
-            color: #6bd4ff;
-            text-decoration: none;
-        }
-
-        /* Bottom CTA */
-
-        .bottom-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #000000cc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .bottom-bar a {
-            display: inline-block;
-            width: 90%;
-            max-width: 320px;
-            padding: 14px;
-            border-radius: 30px;
-            background: #12d8fa;
-            color: #000;
-            font-weight: 700;
-            text-decoration: none;
-        }
-    </style>
+.ads-box a:hover{
+    text-decoration:underline;
+}
+</style>
 </head>
 
 <body>
-    <div class="overlay">
 
-        <div class="container">
+<div class="container">
 
-            <div class="profile-box">
-                <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/6952a267b21b7_40bb2f3d-25fd-484d-9b63-a8468a701820.jfif" alt="Garud Fixer">
-                <h1>Garud Fixer (Baazigar)</h1>
-            </div>
+    <h1>RONAK CRICKET</h1>
+    <div class="subtitle">Best channel of India</div>
 
-            <div class="card">
-                <h2>Cricket Match Predictions</h2>
-                <p style="opacity:.9;">Well researched match insights & analysis</p>
-                <a href="https://t.me/+9WnufKITJK9lM2I1" class="btn">Join Free Telegram Channel</a>
-            </div>
+    <!-- First Join Button -->
+    <a href="https://t.me/+Vuw_Q6D1sB9hMGJl" class="btn" target="_blank">
+        🚀 Join Telegram
+    </a>
 
-            <div class="card">
-                <h2>What You Get</h2>
-                <ul class="features">
-                    <li>Match & Toss Analysis</li>
-                    <li>Team Performance Insights</li>
-                    <li>Daily Free Updates</li>
-                    <li>Simple & Clean Info</li>
-                </ul>
-            </div>
+    <div class="countdown-box">
+        <h2>Offer Ends In:</h2>
+        <div id="timer">10</div>
+    </div>
 
-            <div class="card">
-                <p style="opacity:.9;">
-                    Trusted by thousands of cricket lovers across India.
-                </p>
-            </div>
+    <div class="features">
+        🔥 Back to back 10 matches pass 💯💯 <br>
+        👑 Cricket match tipping queen <br>
+        ✅ 97% accuracy in Matches
+    </div>
 
-            <div class="footer">
-                Marketing by :
-                <a href="https://t.me/+lpl9wSvnR3YyZjA1">QB Agency™</a>
-            </div>
+    <!-- Second Join Button -->
+    <a href="https://t.me/+Vuw_Q6D1sB9hMGJl" class="footer-btn" target="_blank">
+        💚 Join Now & Get Premium Tips
+    </a>
 
-        </div>
+    <div class="small-text">
+        You are invited to the channel Ronak Cricket™ <br>
+        Click above to join.
+    </div>
 
-        <div class="bottom-bar">
-            <a href="https://t.me/+9WnufKITJK9lM2I1">अभी टेलीग्राम जॉइन करें</a>
-        </div>
+    <!-- Updated Ads Box -->
+    <div class="ads-box">
+        Ads By 
+        <a href="https://t.me/+_ldYCcyc-qwwODU1" target="_blank">
+            Ck Ads Agency
+        </a>
+    </div>
 
-    </div>
+</div>
+
+<script>
+let timeLeft = 10;
+let timer = document.getElementById("timer");
+
+let countdown = setInterval(function(){
+    timeLeft--;
+    timer.innerHTML = timeLeft;
+    if(timeLeft <= 0){
+        clearInterval(countdown);
+        timer.innerHTML = "Expired";
+    }
+},1000);
+</script>
+
 </body>
-
 </html>

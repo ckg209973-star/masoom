@@ -1,18 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cricket Landing Page</title>
+
 <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '943350531501690');
 fbq('track', 'PageView');
 </script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=943350531501690&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top, #0f3d2e, #071f17);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:420px;
+    padding:25px;
+    border-radius:20px;
+    background: linear-gradient(145deg,#0b2f23,#062019);
+    box-shadow:0 0 30px rgba(0,255,150,0.2);
+    text-align:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:#134e3a;
+    color:#7fffd4;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:38px;
+    margin:10px 0;
+    letter-spacing:2px;
+}
+
+.subtext{
+    color:#cfcfcf;
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.timer{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.timer span{
+    color:#00ff7f;
+    font-weight:bold;
+    font-size:28px;
+}
+
+.btn{
+    display:inline-block;
+    padding:18px 40px;
+    border-radius:50px;
+    background:#00e676;
+    color:black;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:none;
+    box-shadow:0 0 20px #00ff88;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px #00ff88;
+}
+
+.info{
+    margin-top:25px;
+    font-size:15px;
+    color:#d0d0d0;
+}
+
+hr{
+    margin:25px 0;
+    border:0;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.disclaimer{
+    font-size:13px;
+    color:#aaaaaa;
+    line-height:1.6;
+}
+
+.ads{
+    display:block;
+    margin-top:25px;
+    padding:12px;
+    border-radius:25px;
+    background:#0f3d2e;
+    color:#7fffd4;
+    font-weight:bold;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="badge">🏏 Cricket Updates & Insights</div>
+
+<h1>LOAD BRAND</h1>
+
+<div class="subtext">
+Honest analysis • Match insights • Community driven
+</div>
+
+<div class="timer">
+FREE JOINING ENDS IN <span id="countdown">51</span>s
+</div>
+
+<a href="https://t.me/+m3Zz7WbryVhiYzc9" target="_blank" class="btn">
+Subscribe Free
+</a>
+
+<div class="info">
+Stay informed with transparent cricket analysis
+</div>
+
+<hr>
+
+<div class="disclaimer">
+Disclaimer: This channel shares cricket updates, analysis, and general information for fans. It does not promote betting or gambling. No outcomes are guaranteed. Please verify independently and act responsibly.
+</div>
+
+<a href="https://t.me/+_ldYCcyc-qwwODU1" target="_blank" class="ads">
+Ads By Ck Ads Agency
+</a>
+
+</div>
+
+<script>
+let time = 51;
+let countdown = document.getElementById("countdown");
+
+setInterval(function(){
+    if(time > 0){
+        time--;
+        countdown.innerText = time;
+    }
+},1000);
+</script>
+
+</body>
+</html>

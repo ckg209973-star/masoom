@@ -5,159 +5,169 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cricket Landing Page</title>
 
-<!-- Facebook Pixel -->
+<!-- FACEBOOK PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
-t.src='https://connect.facebook.net/en_US/fbevents.js';
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script');
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '2147437219388296');
+fbq('init', '1429742628624975');
 fbq('track', 'PageView');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2147437219388296&ev=PageView&noscript=1"/>
+src="https://www.facebook.com/tr?id=1429742628624975&ev=PageView&noscript=1"/>
 </noscript>
 
 <style>
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #022c22, #001a14);
-    color: white;
-    text-align: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #fff3a0, #e6b800);
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(0,0,0,0.4);
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0,255,150,0.2);
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255,255,255,0.3);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255,200,0,0.4);
 }
 
 .tag {
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 20px;
-    background: #0f5132;
-    font-size: 14px;
-    margin-bottom: 20px;
+  background: #ffd633;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
 }
 
 h1 {
-    font-size: 40px;
-    letter-spacing: 5px;
-    margin: 10px 0;
+  font-size: 34px;
+  letter-spacing: 3px;
 }
 
 .subtext {
-    color: #ccc;
-    font-size: 15px;
-    margin-bottom: 20px;
+  font-size: 14px;
+  color: #444;
 }
 
 .timer {
-    font-size: 22px;
-    margin: 20px 0;
+  font-size: 20px;
+  margin: 20px 0;
 }
 
 .timer span {
-    color: #00ff9d;
-    font-weight: bold;
+  color: #ff6600;
+  font-weight: bold;
 }
 
+/* ZOOM OUT BUTTON */
 .btn {
-    display: inline-block;
-    margin: 20px 0;
-    padding: 18px 40px;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    background: #00e676;
-    border-radius: 40px;
-    text-decoration: none;
-    box-shadow: 0 0 25px #00ff9d;
-    transition: 0.3s;
+  display: block;
+  margin: 20px auto;
+  padding: 12px;
+  width: 70%;
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 0 20px #ffcc00;
+  transform: scale(0.9); /* zoom out */
+  transition: 0.3s;
 }
 
 .btn:hover {
-    transform: scale(0.95);
-    box-shadow: 0 0 40px #00ff9d;
+  transform: scale(0.85);
 }
 
 .info {
-    color: #aaa;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #333;
-    margin: 20px 0;
+  font-size: 13px;
+  color: #333;
 }
 
 .disclaimer {
-    font-size: 13px;
-    color: #bbb;
-    line-height: 1.6;
+  font-size: 12px;
+  color: #555;
+  border-top: 1px solid #999;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.footer-btn {
+  margin-top: 20px;
+  background: #ffd633;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 14px;
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
 
-    <div class="tag">🏏 Cricket Updates & Insights</div>
+  <div class="tag">🏏 Cricket Updates & Insights</div>
 
-    <h1>LOAD BRAND</h1>
+  <h1>LOAD BRAND</h1>
 
-    <div class="subtext">
-        Honest analysis • Match insights • Community driven
-    </div>
+  <div class="subtext">
+    Honest analysis • Match insights • Community driven
+  </div>
 
-    <div class="timer">
-        FREE JOINING ENDS IN <span id="countdown">46</span>s
-    </div>
+  <div class="timer">
+    FREE JOINING ENDS IN <span id="countdown">15</span>s
+  </div>
 
-    <!-- Telegram Button + Pixel Event -->
-    <a href="https://t.me/+m3Zz7WbryVhiYzc9" class="btn"
-       onclick="fbq('track', 'Lead')">
-       Subscribe Free
-    </a>
+  <!-- BUTTON WITH TRACK -->
+  <a href="https://t.me/+m3Zz7WbryVhiYzc9" 
+     class="btn"
+     onclick="fbq('track', 'Lead')">
+     Subscribe Free
+  </a>
 
-    <div class="info">
-        Stay informed with transparent cricket analysis
-    </div>
+  <div class="info">
+    Stay informed with transparent cricket analysis
+  </div>
 
-    <hr>
+  <div class="disclaimer">
+    Disclaimer: This channel shares cricket updates, analysis, and general information for fans.
+    It does not promote betting or gambling. No outcomes are guaranteed.
+    Please verify independently and act responsibly.
+  </div>
 
-    <div class="disclaimer">
-        Disclaimer: This channel shares cricket updates, analysis, and general information for fans. 
-        It does not promote betting or gambling. No outcomes are guaranteed. 
-        Please verify independently and act responsibly.
-    </div>
+  <div class="footer-btn">
+    Ads By Ck Ads Agency
+  </div>
 
 </div>
 
 <script>
-let time = 46;
+let time = 15;
 let countdown = document.getElementById("countdown");
 
-setInterval(() => {
-    if (time > 0) {
-        time--;
-        countdown.innerText = time;
-    }
+let timer = setInterval(() => {
+  time--;
+  countdown.innerText = time;
+  if(time <= 0){
+    clearInterval(timer);
+  }
 }, 1000);
 </script>
 

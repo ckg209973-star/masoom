@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cricket Landing Page</title>
 
-<!-- Facebook Pixel -->
+<!-- ✅ Facebook Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,31 +16,45 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1424848218606484');
+fbq('init', '1429742628624975'); // 🔥 New Pixel
 fbq('track', 'PageView');
 </script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1429742628624975&ev=PageView&noscript=1"/>
+</noscript>
 
 <style>
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #021d16, #064e3b);
+    background: #021d16;
     color: white;
     text-align: center;
+    overflow: hidden;
+}
+
+/* Canvas background */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* Glass container */
 .container {
     max-width: 400px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 25px;
     border-radius: 25px;
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     box-shadow: 0 0 40px rgba(0,255,150,0.2);
 }
 
-/* Top tag */
+/* Tag */
 .tag {
     background: linear-gradient(90deg, #00ff99, #00c853);
     padding: 10px 20px;
@@ -61,7 +75,6 @@ h1 {
 .subtext {
     color: #cfcfcf;
     font-size: 15px;
-    margin-bottom: 20px;
 }
 
 /* Timer */
@@ -75,7 +88,7 @@ h1 {
     font-weight: bold;
 }
 
-/* Premium Button */
+/* Button */
 .btn {
     display: inline-block;
     background: linear-gradient(90deg, #00ff99, #00c853);
@@ -90,7 +103,6 @@ h1 {
     animation: zoom 1.5s infinite alternate;
 }
 
-/* Zoom animation */
 @keyframes zoom {
     from { transform: scale(0.9); }
     to { transform: scale(1.05); }
@@ -100,11 +112,9 @@ h1 {
     box-shadow: 0 0 50px #00ffcc;
 }
 
-/* Info */
 .info {
     color: #ccc;
     font-size: 14px;
-    margin-top: 10px;
 }
 
 .line {
@@ -115,12 +125,13 @@ h1 {
 .disclaimer {
     font-size: 13px;
     color: #aaa;
-    line-height: 1.5;
 }
 </style>
 </head>
 
 <body>
+
+<canvas id="particles"></canvas>
 
 <div class="container">
 
@@ -136,7 +147,7 @@ h1 {
         FREE JOINING ENDS IN <span id="count">46</span>s
     </div>
 
-    <!-- Join Button -->
+    <!-- ✅ Button with Pixel Event -->
     <a href="https://t.me/+m3Zz7WbryVhiYzc9" class="btn" target="_blank"
        onclick="fbq('track','Lead');">
         Subscribe Free
@@ -149,23 +160,60 @@ h1 {
     <div class="line"></div>
 
     <div class="disclaimer">
-        Disclaimer: This channel shares cricket updates, analysis, and general information for fans. 
-        It does not promote betting or gambling. No outcomes are guaranteed. 
-        Please verify independently and act responsibly.
+        Disclaimer: This channel shares cricket updates and analysis. No guarantees.
     </div>
 
 </div>
 
 <script>
+// Countdown
 let time = 46;
 let counter = document.getElementById("count");
-
 setInterval(() => {
     if(time > 0){
         time--;
         counter.innerText = time;
     }
 }, 1000);
+
+// Particles animation
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0; i<80; i++){
+    particles.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        r: Math.random()*2,
+        dx: (Math.random()-0.5),
+        dy: (Math.random()-0.5)
+    });
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle = "#00ffcc";particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+        ctx.fill();
+
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if(p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if(p.y < 0 || p.y > canvas.height) p.dy *= -1;
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
 </script>
 
 </body>
